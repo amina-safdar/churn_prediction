@@ -26,8 +26,3 @@ CREATE INDEX  IF NOT EXISTS  idx_event_type
     ON churn.event USING btree
     (event_type)
     TABLESPACE pg_default;
-
-CREATE INDEX  IF NOT EXISTS  idx_product_id
-    ON churn.event USING btree
-    (product_id)
-    TABLESPACE pg_default;
