@@ -1,0 +1,21 @@
+title = "liveBook Customer Churn Prediction Configs"
+
+[csv_writer]
+delimiter = ","
+quoting = "csv.QUOTE_NONNUMERIC"
+lineterminator = "\r\n"
+escapechar = "\\"
+
+[db]
+# Note: single-quoted tokens are case-insensitive in PostgresSQL
+name = 'livebook'
+schema = 'churn'
+user = 'postgres'
+password = 'None'
+host = 'localhost'
+port = '5432' # Default port
+
+[path]
+query = "churn_prediction/data_generation"
+csv = "reports/csv/"
+plot = "reports/plots/"
