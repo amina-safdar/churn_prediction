@@ -126,11 +126,20 @@ d = ['LivebookLogin',
      'FirstManningAccess',
      'FirstLivebookAccess',
      'ReadingOwnedBook']
-for x in d:
+a = ['total_events_per_quarter',
+     'uniq_prod_ct_per_quarter',
+     'total_freebies_per_quarter',
+     'pct_downloads_per_quarter',
+     'pct_reading_per_quarter']
+
+for metric in a:
     t = {
-        'from_yyyy-mm-dd': '2019-12-01',
+        'from_yyyy-mm-dd': '2020-02-22',
         'to_yyyy-mm-dd': '2020-06-01',
-        'event_type': x
-    }
-    q = Query("events_per_day", "save", bind_var=t, save_ext=x)
-    q.run()
+        'specified_metric': metric}
+    q = Query("metrics_over_time", "save", bind_var=t, save_ext=metric)
+
+p = Query("updated_curr_customer_metrics", "save")
+
+y = Query("updated_churner_metrics", "save")
+y.run()
