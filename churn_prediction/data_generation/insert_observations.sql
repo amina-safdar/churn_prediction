@@ -5,7 +5,7 @@ WITH
             product_id,
             MIN(event_time) AS min_time
         FROM churn.event
-        WHERE event_type IN ('ReadingOwnedBook', 'EbookDownloaded')
+        WHERE event_type IN ('ReadingOwnedBook', 'EBookDownloaded')
         GROUP BY account_id, product_id), 
     before_mar AS (
         SELECT DISTINCT account_id
