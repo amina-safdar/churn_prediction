@@ -1,5 +1,5 @@
 # churn_prediction
-Predicting customer churn in e-learning platform from behaviour analysis to churn forecasting.
+Predicting customer churn on reading platform from behaviour analysis to churn forecasting.
 
 ## About the data
 The raw event data was collected from Manning's liveBook customers over six months from December 1, 2019 through June 1, 2020. Account IDs (`account_id` column) have been anonymized. 
