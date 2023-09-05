@@ -1,6 +1,4 @@
 # churn_prediction
- 
-# customer_churn_prediction
 Predicting customer churn in e-learning platform from behaviour analysis to churn forecasting.
 
 ## About the data
