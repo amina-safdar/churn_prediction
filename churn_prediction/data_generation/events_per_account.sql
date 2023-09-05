@@ -12,7 +12,7 @@ WITH
 
 SELECT 
     event_type,
-    COUNT(*) AS event_count -- number of events logged in the measurement period,
+    COUNT(*) AS event_count, -- number of events logged in the measurement period
     account_count,
     COUNT(*)::float/account_count AS events_per_account,
     -- 30.5 days/month average using months in the measurement period
