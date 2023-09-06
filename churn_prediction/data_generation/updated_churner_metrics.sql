@@ -1,7 +1,7 @@
 WITH observation_params AS (
 	SELECT  
 		interval '28 days' AS metric_period,
-    		'2020-12-01'::timestamp AS obs_start,
+    		'2019-12-01'::timestamp AS obs_start,
     		'2020-06-01'::timestamp AS obs_end)
 
 SELECT 
