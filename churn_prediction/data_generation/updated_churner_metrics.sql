@@ -1,18 +1,18 @@
 WITH observation_params AS (
 	SELECT  
 		interval '28 days' AS metric_period,
-    	'2020-01-01'::timestamp AS obs_start,
-    	'2020-06-01'::timestamp AS obs_END)
+    		'2020-12-01'::timestamp AS obs_start,
+    		'2020-06-01'::timestamp AS obs_end)
 
 SELECT 
 	metric.account_id, 
 	churn_observation.observation_date, 
 	is_churn,
-    SUM(CASE WHEN metric_id = 10 THEN metric_value ELSE 0 END) AS total_events,
+    	SUM(CASE WHEN metric_id = 10 THEN metric_value ELSE 0 END) AS total_events,
 	SUM(CASE WHEN metric_id = 11 THEN metric_value ELSE 0 END) AS uniq_prod_ct,
-    SUM(CASE WHEN metric_id = 12 THEN metric_value ELSE 0 END) AS total_freebies,
-    SUM(CASE WHEN metric_id = 13 THEN metric_value ELSE 0 END) AS pct_reading,
-    SUM(CASE WHEN metric_id = 14 THEN metric_value ELSE 0 END) AS pct_downloads_per_book,
+   	SUM(CASE WHEN metric_id = 12 THEN metric_value ELSE 0 END) AS total_freebies,
+   	SUM(CASE WHEN metric_id = 13 THEN metric_value ELSE 0 END) AS pct_reading,
+   	SUM(CASE WHEN metric_id = 14 THEN metric_value ELSE 0 END) AS pct_downloads_per_book,
 	SUM(CASE WHEN metric_id = 9 THEN metric_value ELSE 0 END) AS ReadingOwnedBook,
 	SUM(CASE WHEN metric_id = 6 THEN metric_value ELSE 0 END) AS EBookDownloaded,
 	SUM(CASE WHEN metric_id = 5 THEN metric_value ELSE 0 END) AS ReadingFreePreview,
