@@ -22,6 +22,5 @@ The raw event data was collected from Manning's liveBook customers over six mont
 |                                   | Create churner dataset             |                                              | updated_churner_metrics.csv       |                                   |
 |                                   | Cohort analysis                    |                                              |                                   | 3_churn_analysis.ipynb            |
 
-Improvements:
-
-Postgres for scale, seaborn for viz
+Notes on future improvements:
+Consider Seaborn for viz.
